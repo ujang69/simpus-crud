@@ -1,0 +1,21 @@
+
+:root{--accent:#2b7a78;--muted:#f4f4f4}
+body{font-family:Inter,system-ui,Arial; margin:0; background:#fff; color:#111}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:var(--muted);}
+.topbar h1{margin:0;font-size:18px}
+.actions{display:flex;gap:8px;align-items:center}
+.actions input{padding:6px;border-radius:6px;border:1px solid #ccc}
+.actions select{padding:6px;border-radius:6px}
+button{background:var(--accent);color:#fff;border:none;padding:8px 10px;border-radius:6px;cursor:pointer}
+main{padding:18px}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th,td{padding:8px;border-bottom:1px solid #eee;text-align:left;font-size:13px}
+th{background:#f7faf9}
+.hidden{display:none}
+form{max-width:560px;background:#fafafa;padding:12px;border-radius:8px;border:1px solid #eee}
+form label{display:block;margin-bottom:8px}
+form input, form select{width:100%;padding:8px;border-radius:6px;border:1px solid #ddd}
+.form-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:10px}
+.footer-actions{display:flex;gap:8px;margin-top:8px}
+small{display:block;padding:10px 18px;color:#666}
+.action-link{background:transparent;color:var(--accent);border:1px solid var(--accent);padding:6px;border-radius:6px}

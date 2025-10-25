@@ -1,0 +1,1 @@
+SIMPUS Prototype (CRUD) - README\n\nOpen index.html in browser. Data stored in localStorage.

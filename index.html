@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SIMPUS - Prototype CRUD</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>SIMPUS - Prototype (CRUD, localStorage)</h1>
+    <div class="actions">
+      <button id="btnAdd">+ Tambah Pasien</button>
+      <input id="search" placeholder="Cari nama / ID / ICD-10..." />
+      <select id="filterVisit">
+        <option value="">Semua Kunjungan</option>
+        <option>Rawat Jalan</option>
+        <option>Rawat Inap</option>
+        <option>Dirujuk</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="listSection">
+      <table id="patientsTable">
+        <thead>
+          <tr>
+            <th>ID</th><th>Nama</th><th>Jenis</th><th>Tanggal</th><th>Diagnosa (ICD-10)</th><th>Dokter</th><th>Status</th><th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="formSection" class="hidden">
+      <form id="patientForm">
+        <h2 id="formTitle">Tambah Pasien</h2>
+        <label>ID <input name="id" required /></label>
+        <label>Nama <input name="name" required /></label>
+        <label>Tgl Lahir <input name="dob" type="date" required/></label>
+        <label>Gender <select name="gender"><option>M</option><option>F</option></select></label>
+        <label>Jenis Kunjungan <select name="visit"><option>Rawat Jalan</option><option>Rawat Inap</option><option>Dirujuk</option></select></label>
+        <label>Tanggal Kunjungan <input name="date" type="date" required/></label>
+        <label>Diagnosa (ICD-10) <input name="diag" /></label>
+        <label>Dokter <input name="doctor" /></label>
+        <label>Wad / Kelas <input name="ward" /></label>
+        <label>Status <input name="status" /></label>
+        <div class="form-actions">
+          <button type="submit">Simpan</button>
+          <button type="button" id="btnCancel">Batal</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <small>Prototype SIMPUS — data disimpan di browser (localStorage). Untuk reset gunakan tombol Reset di bawah.</small>
+    <div class="footer-actions">
+      <button id="btnReset">Reset ke data contoh</button>
+      <button id="btnExport">Export CSV</button>
+    </div>
+  </footer>
+
+<script src="app.js"></script>
+</body>
+</html>
